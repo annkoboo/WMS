@@ -1,0 +1,1323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5FD9850D-F362-44E4-9FB6-BD3B90FC5AA4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WMS.My.MyApplication</StartupObject>
+    <RootNamespace>WMS</RootNamespace>
+    <AssemblyName>WMS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <CodePage>932</CodePage>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>WMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>WMS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Windows\assembly\GAC_MSIL\Microsoft.ReportViewer.Common\11.0.0.0__89845dcd8080cc91\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Microsoft Visual Studio 11.0\ReportViewer\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\VBPowerPacks\v12.0\Microsoft.VisualBasic.PowerPacks.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.DataAccess, Version=2.112.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\app\afc\product\11.2.0\dbhome_1\ODP.NET\bin\2.x\Oracle.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\ClassACCESS.vb" />
+    <Compile Include="Class\ClassCode.vb" />
+    <Compile Include="Class\ClassForm.vb" />
+    <Compile Include="Form\00Menu\frmMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\01Nyuka\frmNyukoLblRePrt.designer.vb">
+      <DependentUpon>frmNyukoLblRePrt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\01Nyuka\frmNyukoLblRePrt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\01Nyuka\frmNyukoLblPrt.Designer.vb">
+      <DependentUpon>frmNyukoLblPrt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\01Nyuka\frmNyukoLblPrt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\01Nyuka\frmNyukaUkeKeikaku.Designer.vb">
+      <DependentUpon>frmNyukaUkeKeikaku.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\01Nyuka\frmNyukaUkeKeikaku.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\01Nyuka\frmNyukaUkeKeikakuGai.designer.vb">
+      <DependentUpon>frmNyukaUkeKeikakuGai.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\01Nyuka\frmNyukaUkeKeikakuGai.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\01Nyuka\frmNyukoKanryo.designer.vb">
+      <DependentUpon>frmNyukoKanryo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\01Nyuka\frmNyukoKanryo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\01Nyuka\frmYokiHimozuke.designer.vb">
+      <DependentUpon>frmYokiHimozuke.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\01Nyuka\frmYokiHimozuke.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\01Nyuka\frmTumiMasiNyuko.designer.vb">
+      <DependentUpon>frmTumiMasiNyuko.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\01Nyuka\frmTumiMasiNyuko.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\01Nyuka\frmKaraYokiNyuko.designer.vb">
+      <DependentUpon>frmKaraYokiNyuko.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\01Nyuka\frmKaraYokiNyuko.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\02Shuka\frmPicSagyo.designer.vb">
+      <DependentUpon>frmPicSagyo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\02Shuka\frmPicSagyo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\02Shuka\frmShukaModosi.designer.vb">
+      <DependentUpon>frmShukaModosi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\02Shuka\frmShukaModosi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\02Shuka\frmShukaStop.designer.vb">
+      <DependentUpon>frmShukaStop.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\02Shuka\frmShukaStop.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\02Shuka\frmShukaStart.designer.vb">
+      <DependentUpon>frmShukaStart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\02Shuka\frmShukaStart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\02Shuka\frmZaiYoyaku.designer.vb">
+      <DependentUpon>frmZaiYoyaku.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\02Shuka\frmZaiYoyaku.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\02Shuka\frmKeikakuGaiShuka_HinCd.designer.vb">
+      <DependentUpon>frmKeikakuGaiShuka_HinCd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\02Shuka\frmKeikakuGaiShuka_HinCd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\02Shuka\frmKeikakuGaiShuka_Toiawase.designer.vb">
+      <DependentUpon>frmKeikakuGaiShuka_Toiawase.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\02Shuka\frmKeikakuGaiShuka_Toiawase.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\03Kenpin\frmOrosiKenpin01.designer.vb">
+      <DependentUpon>frmOrosiKenpin01.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\03Kenpin\frmOrosiKenpin01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\03Kenpin\frmOrosiKenpin04.designer.vb">
+      <DependentUpon>frmOrosiKenpin04.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\03Kenpin\frmOrosiKenpin04.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\03Kenpin\frmOrosiKenpin02.designer.vb">
+      <DependentUpon>frmOrosiKenpin02.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\03Kenpin\frmOrosiKenpin02.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\03Kenpin\frmOrosiKenpin03.designer.vb">
+      <DependentUpon>frmOrosiKenpin03.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\03Kenpin\frmOrosiKenpin03.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\03Kenpin\frmTuhanKenpin04.designer.vb">
+      <DependentUpon>frmTuhanKenpin04.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\03Kenpin\frmTuhanKenpin04.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\03Kenpin\frmTuhanKenpin02.designer.vb">
+      <DependentUpon>frmTuhanKenpin02.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\03Kenpin\frmTuhanKenpin02.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\03Kenpin\frmTuhanKenpin03.designer.vb">
+      <DependentUpon>frmTuhanKenpin03.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\03Kenpin\frmTuhanKenpin03.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\04Hoju\frmHojuLstPrt.designer.vb">
+      <DependentUpon>frmHojuLstPrt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\04Hoju\frmHojuLstPrt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\04Hoju\frmHojuKanryo.designer.vb">
+      <DependentUpon>frmHojuKanryo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\04Hoju\frmHojuKanryo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\04Hoju\frmTujoHoju.designer.vb">
+      <DependentUpon>frmTujoHoju.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\04Hoju\frmTujoHoju.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\05Ido\frmSokoKanIdo.designer.vb">
+      <DependentUpon>frmSokoKanIdo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\05Ido\frmSokoKanIdo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\05Ido\frmIdoLstPrt.Designer.vb">
+      <DependentUpon>frmIdoLstPrt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\05Ido\frmIdoLstPrt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\05Ido\frmIdoKanryo.designer.vb">
+      <DependentUpon>frmIdoKanryo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\05Ido\frmIdoKanryo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\05Ido\frmAwIdoShuko.designer.vb">
+      <DependentUpon>frmAwIdoShuko.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\05Ido\frmAwIdoShuko.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmDpsTanaWariLst.designer.vb">
+      <DependentUpon>frmDpsTanaWariLst.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmDpsTanaWariLst.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmDeadStockLst.designer.vb">
+      <DependentUpon>frmDeadStockLst.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmDeadStockLst.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmNyuShukaLstPrt.designer.vb">
+      <DependentUpon>frmNyuShukaLstPrt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmNyuShukaLstPrt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmNyuShukaLst.designer.vb">
+      <DependentUpon>frmNyuShukaLst.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmNyuShukaLst.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmNyukoLst.designer.vb">
+      <DependentUpon>frmNyukoLst.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmNyukoLst.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmNyukaSts.designer.vb">
+      <DependentUpon>frmNyukaSts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmNyukaSts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmShukaSijiNoLst.designer.vb">
+      <DependentUpon>frmShukaSijiNoLst.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmShukaSijiNoLst.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmShukaKigenLstPrt.designer.vb">
+      <DependentUpon>frmShukaKigenLstPrt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmShukaKigenLstPrt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmShukaKigenLst.designer.vb">
+      <DependentUpon>frmShukaKigenLst.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmShukaKigenLst.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmShukaTuiseki.designer.vb">
+      <DependentUpon>frmShukaTuiseki.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmShukaTuiseki.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmShukaSts.designer.vb">
+      <DependentUpon>frmShukaSts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmShukaSts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmShukaLst.designer.vb">
+      <DependentUpon>frmShukaLst.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmShukaLst.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmZaiLst.designer.vb">
+      <DependentUpon>frmZaiLst.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmZaiLst.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmKanryoshaInfo.designer.vb">
+      <DependentUpon>frmKanryoshaInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmKanryoshaInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmKakunoSts.designer.vb">
+      <DependentUpon>frmKakunoSts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmKakunoSts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmHachuLotSuLst.designer.vb">
+      <DependentUpon>frmHachuLotSuLst.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmHachuLotSuLst.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmIdoSts.designer.vb">
+      <DependentUpon>frmIdoSts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmIdoSts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmIdoLst.designer.vb">
+      <DependentUpon>frmIdoLst.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmIdoLst.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmHojuSts.designer.vb">
+      <DependentUpon>frmHojuSts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmHojuSts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmHojuLst.designer.vb">
+      <DependentUpon>frmHojuLst.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmHojuLst.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmOkurijoLst.designer.vb">
+      <DependentUpon>frmOkurijoLst.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmOkurijoLst.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmChokiTairyuLstPrt.designer.vb">
+      <DependentUpon>frmChokiTairyuLstPrt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmChokiTairyuLstPrt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmChokiTairyuLst.designer.vb">
+      <DependentUpon>frmChokiTairyuLst.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmChokiTairyuLst.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMArea.designer.vb">
+      <DependentUpon>frmMArea.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMArea.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmDevSet.designer.vb">
+      <DependentUpon>frmDevSet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmDevSet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmHostIFSet.designer.vb">
+      <DependentUpon>frmHostIFSet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmHostIFSet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMJiyuDef.designer.vb">
+      <DependentUpon>frmMJiyuDef.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMJiyuDef.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMJiyu.designer.vb">
+      <DependentUpon>frmMJiyu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMJiyu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMUser.designer.vb">
+      <DependentUpon>frmMUser.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMUser.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmNyukaYoteMnt.designer.vb">
+      <DependentUpon>frmNyukaYoteMnt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmNyukaYoteMnt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmNyukaYoteLstPrt.designer.vb">
+      <DependentUpon>frmNyukaYoteLstPrt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmNyukaYoteLstPrt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmShukaYoteMnt.designer.vb">
+      <DependentUpon>frmShukaYoteMnt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmShukaYoteMnt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmShukaYoteLstPrt.designer.vb">
+      <DependentUpon>frmShukaYoteLstPrt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmShukaYoteLstPrt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMShukaSbt.designer.vb">
+      <DependentUpon>frmMShukaSbt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMShukaSbt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMTani.designer.vb">
+      <DependentUpon>frmMTani.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMTani.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMHinKanKbn.designer.vb">
+      <DependentUpon>frmMHinKanKbn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMHinKanKbn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMHin.designer.vb">
+      <DependentUpon>frmMHin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMHin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmZaiMnt.designer.vb">
+      <DependentUpon>frmZaiMnt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmZaiMnt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMTokuis.designer.vb">
+      <DependentUpon>frmMTokuis.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMTokuis.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMSoko.designer.vb">
+      <DependentUpon>frmMSoko.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMSoko.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMTanaWari.designer.vb">
+      <DependentUpon>frmMTanaWari.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMTanaWari.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMTanaWariLstPrt.designer.vb">
+      <DependentUpon>frmMTanaWariLstPrt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMTanaWariLstPrt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMAccCtl.designer.vb">
+      <DependentUpon>frmMAccCtl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMAccCtl.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmTrackingMnt.designer.vb">
+      <DependentUpon>frmTrackingMnt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmTrackingMnt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmNinusiKbn.designer.vb">
+      <DependentUpon>frmNinusiKbn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmNinusiKbn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmSetubiUnten.designer.vb">
+      <DependentUpon>frmSetubiUnten.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmSetubiUnten.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmSetubiPause.designer.vb">
+      <DependentUpon>frmSetubiPause.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmSetubiPause.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMUnso.designer.vb">
+      <DependentUpon>frmMUnso.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\07Mnt\frmMUnso.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\08Sys\frmSysSet.designer.vb">
+      <DependentUpon>frmSysSet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\08Sys\frmSysSet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\08Sys\frmSetubiSts.designer.vb">
+      <DependentUpon>frmSetubiSts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\08Sys\frmSetubiSts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\08Sys\frmSetubiConn.designer.vb">
+      <DependentUpon>frmSetubiConn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\08Sys\frmSetubiConn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\08Sys\frmBatDD.designer.vb">
+      <DependentUpon>frmBatDD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\08Sys\frmBatDD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\09Aw\frmNyuShukoMode.designer.vb">
+      <DependentUpon>frmNyuShukoMode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\09Aw\frmNyuShukoMode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\09Aw\frmAwSts.designer.vb">
+      <DependentUpon>frmAwSts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\09Aw\frmAwSts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\09Aw\frmAwTonyu.designer.vb">
+      <DependentUpon>frmAwTonyu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\09Aw\frmAwTonyu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\09Aw\frmAwTanaOrosi.designer.vb">
+      <DependentUpon>frmAwTanaOrosi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\09Aw\frmAwTanaOrosi.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\09Aw\frmAwIdo.designer.vb">
+      <DependentUpon>frmAwIdo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\09Aw\frmAwIdo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\09Aw\frmAwTumiMasiNyuko.designer.vb">
+      <DependentUpon>frmAwTumiMasiNyuko.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\09Aw\frmAwTumiMasiNyuko.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\09Aw\frmAwHoju.designer.vb">
+      <DependentUpon>frmAwHoju.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\09Aw\frmAwHoju.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\09Aw\frmAwKeikakuGaiShuko.designer.vb">
+      <DependentUpon>frmAwKeikakuGaiShuko.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\09Aw\frmAwKeikakuGaiShuko.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\09Aw\frmAwOpe.designer.vb">
+      <DependentUpon>frmAwOpe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\09Aw\frmAwOpe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\10TanaOrosi\frmTanaOrosiLstPrt.Designer.vb">
+      <DependentUpon>frmTanaOrosiLstPrt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\10TanaOrosi\frmTanaOrosiLstPrt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\10TanaOrosi\frmTanaOrosiZanLst.designer.vb">
+      <DependentUpon>frmTanaOrosiZanLst.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\10TanaOrosi\frmTanaOrosiZanLst.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\10TanaOrosi\frmTanaOrosiKekkaMnt.designer.vb">
+      <DependentUpon>frmTanaOrosiKekkaMnt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\10TanaOrosi\frmTanaOrosiKekkaMnt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\10TanaOrosi\frmTanaOrosiKekkaAdd.Designer.vb">
+      <DependentUpon>frmTanaOrosiKekkaAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\10TanaOrosi\frmTanaOrosiKekkaAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\10TanaOrosi\frmTanaOrosiWarning.designer.vb">
+      <DependentUpon>frmTanaOrosiWarning.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\10TanaOrosi\frmTanaOrosiWarning.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\10TanaOrosi\frmTanaOrosiOpe.designer.vb">
+      <DependentUpon>frmTanaOrosiOpe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\10TanaOrosi\frmTanaOrosiOpe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\10TanaOrosi\frmZaiSaiWarning.Designer.vb">
+      <DependentUpon>frmZaiSaiWarning.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\10TanaOrosi\frmZaiSaiWarning.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\10TanaOrosi\frmTuhanLotMnt.designer.vb">
+      <DependentUpon>frmTuhanLotMnt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\10TanaOrosi\frmTuhanLotMnt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\11Bunseki\作業分析.designer.vb">
+      <DependentUpon>作業分析.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\11Bunseki\作業分析.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\11Bunseki\作業者詳細分析.designer.vb">
+      <DependentUpon>作業者詳細分析.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\11Bunseki\作業者詳細分析.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\11Bunseki\作業者詳細分析リスト発行.designer.vb">
+      <DependentUpon>作業者詳細分析リスト発行.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\11Bunseki\作業者詳細分析リスト発行.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\11Bunseki\商品分析.designer.vb">
+      <DependentUpon>商品分析.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\11Bunseki\商品分析.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\11Bunseki\商品分析リスト発行.designer.vb">
+      <DependentUpon>商品分析リスト発行.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\11Bunseki\商品分析リスト発行.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\12DPM\frmDPMUserLst.designer.vb">
+      <DependentUpon>frmDPMUserLst.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\12DPM\frmDPMUserLst.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\12DPM\作業問合せ_メンテナンス.designer.vb">
+      <DependentUpon>作業問合せ_メンテナンス.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\12DPM\作業問合せ_メンテナンス.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\12DPM\frmDPMUserAdd.designer.vb">
+      <DependentUpon>frmDPMUserAdd.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\12DPM\frmDPMUserAdd.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\12DPM\出荷指示No強制完了.designer.vb">
+      <DependentUpon>出荷指示No強制完了.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\12DPM\出荷指示No強制完了.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\12DPM\frmHyojikiTest.designer.vb">
+      <DependentUpon>frmHyojikiTest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\12DPM\frmHyojikiTest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\12DPM\通信ログ問合せ.designer.vb">
+      <DependentUpon>通信ログ問合せ.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\12DPM\通信ログ問合せ.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmLogon.designer.vb">
+      <DependentUpon>frmLogon.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmLogon.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmMJiyuSel.designer.vb">
+      <DependentUpon>frmMJiyuSel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmMJiyuSel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmNyukoLblSel.designer.vb">
+      <DependentUpon>frmNyukoLblSel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmNyukoLblSel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmShukaLstRePrt.designer.vb">
+      <DependentUpon>frmShukaLstRePrt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmShukaLstRePrt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmShukasSel.designer.vb">
+      <DependentUpon>frmShukasSel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmShukasSel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmShukaModosiLstPrt.designer.vb">
+      <DependentUpon>frmShukaModosiLstPrt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmShukaModosiLstPrt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmShukaSijiSel.designer.vb">
+      <DependentUpon>frmShukaSijiSel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmShukaSijiSel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmShukaStopLstPrt.designer.vb">
+      <DependentUpon>frmShukaStopLstPrt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmShukaStopLstPrt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmHinSel.Designer.vb">
+      <DependentUpon>frmHinSel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmHinSel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmZaiLstPrt.designer.vb">
+      <DependentUpon>frmZaiLstPrt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\06Toiawase\frmZaiLstPrt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmZaiYoyakuLstPrt.designer.vb">
+      <DependentUpon>frmZaiYoyakuLstPrt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmZaiYoyakuLstPrt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmTanaZai.designer.vb">
+      <DependentUpon>frmTanaZai.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmTanaZai.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmErr.designer.vb">
+      <DependentUpon>frmErr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmErr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmHojuMotoSet.designer.vb">
+      <DependentUpon>frmHojuMotoSet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmHojuMotoSet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmTuhanKenpin10Key.designer.vb">
+      <DependentUpon>frmTuhanKenpin10Key.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\20Kyotu\frmTuhanKenpin10Key.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\99Keisho\C01Standard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form\99Keisho\C02Popup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Class\ClassDataGrid.vb" />
+    <Compile Include="clsApplication\ApplicationEvents.vb" />
+    <Compile Include="clsApplication\AppSettings.vb" />
+    <Compile Include="clsCommon\CommonBas.vb" />
+    <Compile Include="clsCommon\Library.vb" />
+    <Compile Include="Form\03Kenpin\frmTuhanKenpin01.designer.vb">
+      <DependentUpon>frmTuhanKenpin01.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form\03Kenpin\frmTuhanKenpin01.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module\CommonModule.vb" />
+    <Compile Include="Module\CommonNET.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form\00Menu\frmMenu.resx">
+      <DependentUpon>frmMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\01Nyuka\frmNyukoLblRePrt.resx">
+      <DependentUpon>frmNyukoLblRePrt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\01Nyuka\frmNyukoLblPrt.resx">
+      <DependentUpon>frmNyukoLblPrt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\01Nyuka\frmNyukaUkeKeikaku.resx">
+      <DependentUpon>frmNyukaUkeKeikaku.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\01Nyuka\frmNyukaUkeKeikakuGai.resx">
+      <DependentUpon>frmNyukaUkeKeikakuGai.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\01Nyuka\frmNyukoKanryo.resx">
+      <DependentUpon>frmNyukoKanryo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\01Nyuka\frmYokiHimozuke.resx">
+      <DependentUpon>frmYokiHimozuke.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\01Nyuka\frmTumiMasiNyuko.resx">
+      <DependentUpon>frmTumiMasiNyuko.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\01Nyuka\frmKaraYokiNyuko.resx">
+      <DependentUpon>frmKaraYokiNyuko.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\02Shuka\frmPicSagyo.resx">
+      <DependentUpon>frmPicSagyo.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\02Shuka\frmShukaModosi.resx">
+      <DependentUpon>frmShukaModosi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\02Shuka\frmShukaStop.resx">
+      <DependentUpon>frmShukaStop.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\02Shuka\frmShukaStart.resx">
+      <DependentUpon>frmShukaStart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\02Shuka\frmZaiYoyaku.resx">
+      <DependentUpon>frmZaiYoyaku.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\02Shuka\frmKeikakuGaiShuka_HinCd.resx">
+      <DependentUpon>frmKeikakuGaiShuka_HinCd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\02Shuka\frmKeikakuGaiShuka_Toiawase.resx">
+      <DependentUpon>frmKeikakuGaiShuka_Toiawase.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\03Kenpin\frmOrosiKenpin01.resx">
+      <DependentUpon>frmOrosiKenpin01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\03Kenpin\frmOrosiKenpin04.resx">
+      <DependentUpon>frmOrosiKenpin04.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\03Kenpin\frmOrosiKenpin02.resx">
+      <DependentUpon>frmOrosiKenpin02.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\03Kenpin\frmOrosiKenpin03.resx">
+      <DependentUpon>frmOrosiKenpin03.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\03Kenpin\frmTuhanKenpin04.resx">
+      <DependentUpon>frmTuhanKenpin04.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\03Kenpin\frmTuhanKenpin02.resx">
+      <DependentUpon>frmTuhanKenpin02.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\03Kenpin\frmTuhanKenpin03.resx">
+      <DependentUpon>frmTuhanKenpin03.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\04Hoju\frmHojuLstPrt.resx">
+      <DependentUpon>frmHojuLstPrt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\04Hoju\frmHojuKanryo.resx">
+      <DependentUpon>frmHojuKanryo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\04Hoju\frmTujoHoju.resx">
+      <DependentUpon>frmTujoHoju.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\05Ido\frmSokoKanIdo.resx">
+      <DependentUpon>frmSokoKanIdo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\05Ido\frmIdoLstPrt.resx">
+      <DependentUpon>frmIdoLstPrt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\05Ido\frmIdoKanryo.resx">
+      <DependentUpon>frmIdoKanryo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\05Ido\frmAwIdoShuko.resx">
+      <DependentUpon>frmAwIdoShuko.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\06Toiawase\frmDpsTanaWariLst.resx">
+      <DependentUpon>frmDpsTanaWariLst.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\06Toiawase\frmDeadStockLst.resx">
+      <DependentUpon>frmDeadStockLst.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\06Toiawase\frmNyuShukaLstPrt.resx">
+      <DependentUpon>frmNyuShukaLstPrt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\06Toiawase\frmNyuShukaLst.resx">
+      <DependentUpon>frmNyuShukaLst.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\06Toiawase\frmNyukoLst.resx">
+      <DependentUpon>frmNyukoLst.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\06Toiawase\frmNyukaSts.resx">
+      <DependentUpon>frmNyukaSts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\06Toiawase\frmShukaSijiNoLst.resx">
+      <DependentUpon>frmShukaSijiNoLst.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\06Toiawase\frmShukaKigenLstPrt.resx">
+      <DependentUpon>frmShukaKigenLstPrt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\06Toiawase\frmShukaKigenLst.resx">
+      <DependentUpon>frmShukaKigenLst.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\06Toiawase\frmShukaTuiseki.resx">
+      <DependentUpon>frmShukaTuiseki.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\06Toiawase\frmShukaSts.resx">
+      <DependentUpon>frmShukaSts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\06Toiawase\frmShukaLst.resx">
+      <DependentUpon>frmShukaLst.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\06Toiawase\frmZaiLst.resx">
+      <DependentUpon>frmZaiLst.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\06Toiawase\frmKanryoshaInfo.resx">
+      <DependentUpon>frmKanryoshaInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\06Toiawase\frmKakunoSts.resx">
+      <DependentUpon>frmKakunoSts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\06Toiawase\frmHachuLotSuLst.resx">
+      <DependentUpon>frmHachuLotSuLst.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\06Toiawase\frmIdoSts.resx">
+      <DependentUpon>frmIdoSts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\06Toiawase\frmIdoLst.resx">
+      <DependentUpon>frmIdoLst.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\06Toiawase\frmHojuSts.resx">
+      <DependentUpon>frmHojuSts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\06Toiawase\frmHojuLst.resx">
+      <DependentUpon>frmHojuLst.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\06Toiawase\frmOkurijoLst.resx">
+      <DependentUpon>frmOkurijoLst.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\06Toiawase\frmChokiTairyuLstPrt.resx">
+      <DependentUpon>frmChokiTairyuLstPrt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\06Toiawase\frmChokiTairyuLst.resx">
+      <DependentUpon>frmChokiTairyuLst.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\07Mnt\frmMArea.resx">
+      <DependentUpon>frmMArea.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\07Mnt\frmDevSet.resx">
+      <DependentUpon>frmDevSet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\07Mnt\frmHostIFSet.resx">
+      <DependentUpon>frmHostIFSet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\07Mnt\frmMJiyuDef.resx">
+      <DependentUpon>frmMJiyuDef.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\07Mnt\frmMJiyu.resx">
+      <DependentUpon>frmMJiyu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\07Mnt\frmMUser.resx">
+      <DependentUpon>frmMUser.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\07Mnt\frmNyukaYoteMnt.resx">
+      <DependentUpon>frmNyukaYoteMnt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\07Mnt\frmNyukaYoteLstPrt.resx">
+      <DependentUpon>frmNyukaYoteLstPrt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\07Mnt\frmShukaYoteMnt.resx">
+      <DependentUpon>frmShukaYoteMnt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\07Mnt\frmShukaYoteLstPrt.resx">
+      <DependentUpon>frmShukaYoteLstPrt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\07Mnt\frmMShukaSbt.resx">
+      <DependentUpon>frmMShukaSbt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\07Mnt\frmMTani.resx">
+      <DependentUpon>frmMTani.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\07Mnt\frmMHinKanKbn.resx">
+      <DependentUpon>frmMHinKanKbn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\07Mnt\frmMHin.resx">
+      <DependentUpon>frmMHin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\07Mnt\frmZaiMnt.resx">
+      <DependentUpon>frmZaiMnt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\07Mnt\frmMTokuis.resx">
+      <DependentUpon>frmMTokuis.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\07Mnt\frmMSoko.resx">
+      <DependentUpon>frmMSoko.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\07Mnt\frmMTanaWari.resx">
+      <DependentUpon>frmMTanaWari.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\07Mnt\frmMTanaWariLstPrt.resx">
+      <DependentUpon>frmMTanaWariLstPrt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\07Mnt\frmMAccCtl.resx">
+      <DependentUpon>frmMAccCtl.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\07Mnt\frmTrackingMnt.resx">
+      <DependentUpon>frmTrackingMnt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\07Mnt\frmNinusiKbn.resx">
+      <DependentUpon>frmNinusiKbn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\07Mnt\frmSetubiUnten.resx">
+      <DependentUpon>frmSetubiUnten.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\07Mnt\frmSetubiPause.resx">
+      <DependentUpon>frmSetubiPause.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\07Mnt\frmMUnso.resx">
+      <DependentUpon>frmMUnso.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\08Sys\frmSysSet.resx">
+      <DependentUpon>frmSysSet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\08Sys\frmSetubiSts.resx">
+      <DependentUpon>frmSetubiSts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\08Sys\frmSetubiConn.resx">
+      <DependentUpon>frmSetubiConn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\08Sys\frmBatDD.resx">
+      <DependentUpon>frmBatDD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\09Aw\frmNyuShukoMode.resx">
+      <DependentUpon>frmNyuShukoMode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\09Aw\frmAwSts.resx">
+      <DependentUpon>frmAwSts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\09Aw\frmAwTonyu.resx">
+      <DependentUpon>frmAwTonyu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\09Aw\frmAwTanaOrosi.resx">
+      <DependentUpon>frmAwTanaOrosi.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\09Aw\frmAwIdo.resx">
+      <DependentUpon>frmAwIdo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\09Aw\frmAwTumiMasiNyuko.resx">
+      <DependentUpon>frmAwTumiMasiNyuko.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\09Aw\frmAwHoju.resx">
+      <DependentUpon>frmAwHoju.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\09Aw\frmAwKeikakuGaiShuko.resx">
+      <DependentUpon>frmAwKeikakuGaiShuko.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\09Aw\frmAwOpe.resx">
+      <DependentUpon>frmAwOpe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\10TanaOrosi\frmTanaOrosiLstPrt.resx">
+      <DependentUpon>frmTanaOrosiLstPrt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\10TanaOrosi\frmTanaOrosiZanLst.resx">
+      <DependentUpon>frmTanaOrosiZanLst.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\10TanaOrosi\frmTanaOrosiKekkaMnt.resx">
+      <DependentUpon>frmTanaOrosiKekkaMnt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\10TanaOrosi\frmTanaOrosiKekkaAdd.resx">
+      <DependentUpon>frmTanaOrosiKekkaAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\10TanaOrosi\frmTanaOrosiWarning.resx">
+      <DependentUpon>frmTanaOrosiWarning.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\10TanaOrosi\frmTanaOrosiOpe.resx">
+      <DependentUpon>frmTanaOrosiOpe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\10TanaOrosi\frmZaiSaiWarning.resx">
+      <DependentUpon>frmZaiSaiWarning.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\10TanaOrosi\frmTuhanLotMnt.resx">
+      <DependentUpon>frmTuhanLotMnt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\11Bunseki\作業分析.resx">
+      <DependentUpon>作業分析.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\11Bunseki\作業者詳細分析.resx">
+      <DependentUpon>作業者詳細分析.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\11Bunseki\作業者詳細分析リスト発行.resx">
+      <DependentUpon>作業者詳細分析リスト発行.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\11Bunseki\商品分析.resx">
+      <DependentUpon>商品分析.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\11Bunseki\商品分析リスト発行.resx">
+      <DependentUpon>商品分析リスト発行.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\12DPM\frmDPMUserLst.resx">
+      <DependentUpon>frmDPMUserLst.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\12DPM\作業問合せ_メンテナンス.resx">
+      <DependentUpon>作業問合せ_メンテナンス.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\12DPM\frmDPMUserAdd.resx">
+      <DependentUpon>frmDPMUserAdd.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\12DPM\出荷指示No強制完了.resx">
+      <DependentUpon>出荷指示No強制完了.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\12DPM\frmHyojikiTest.resx">
+      <DependentUpon>frmHyojikiTest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\12DPM\通信ログ問合せ.resx">
+      <DependentUpon>通信ログ問合せ.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\20Kyotu\frmLogon.resx">
+      <DependentUpon>frmLogon.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\20Kyotu\frmMJiyuSel.resx">
+      <DependentUpon>frmMJiyuSel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\20Kyotu\frmNyukoLblSel.resx">
+      <DependentUpon>frmNyukoLblSel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\20Kyotu\frmShukaLstRePrt.resx">
+      <DependentUpon>frmShukaLstRePrt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\20Kyotu\frmShukasSel.resx">
+      <DependentUpon>frmShukasSel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\20Kyotu\frmShukaModosiLstPrt.resx">
+      <DependentUpon>frmShukaModosiLstPrt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\20Kyotu\frmShukaSijiSel.resx">
+      <DependentUpon>frmShukaSijiSel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\20Kyotu\frmShukaStopLstPrt.resx">
+      <DependentUpon>frmShukaStopLstPrt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\20Kyotu\frmHinSel.resx">
+      <DependentUpon>frmHinSel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\06Toiawase\frmZaiLstPrt.resx">
+      <DependentUpon>frmZaiLstPrt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\20Kyotu\frmZaiYoyakuLstPrt.resx">
+      <DependentUpon>frmZaiYoyakuLstPrt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\20Kyotu\frmTanaZai.resx">
+      <DependentUpon>frmTanaZai.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\20Kyotu\frmErr.resx">
+      <DependentUpon>frmErr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\20Kyotu\frmHojuMotoSet.resx">
+      <DependentUpon>frmHojuMotoSet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\20Kyotu\frmTuhanKenpin10Key.resx">
+      <DependentUpon>frmTuhanKenpin10Key.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\99Keisho\C01Standard.resx">
+      <DependentUpon>C01Standard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\99Keisho\C02Popup.resx">
+      <DependentUpon>C02Popup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="clsCommon\CommonMsg.resx">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form\03Kenpin\frmTuhanKenpin01.resx">
+      <DependentUpon>frmTuhanKenpin01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ImageFiles\右矢印_Off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ImageFiles\左矢印.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ImageFiles\右矢印.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ImageFiles\左矢印_Off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

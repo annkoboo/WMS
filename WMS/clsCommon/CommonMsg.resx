@@ -1,0 +1,472 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root>
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" />
+							<xsd:attribute name="type" type="xsd:string" />
+							<xsd:attribute name="mimetype" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="gamenmei">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="gamenmei" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="gamenID" type="xsd:string" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="ResMimeType">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="Version">
+		<value>1.0.0.0</value>
+	</resheader>
+	<resheader name="Reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="Writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.5000.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="A001">
+		<value>完了しました。</value>
+	</data>
+	<data name="A002">
+		<value>既に使用されています。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="A003">
+		<value>既に発行中のラベルです。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="A004">
+		<value>を出力しました。</value>
+	</data>
+	<data name="D401">
+		<value>を入力してください。</value>
+	</data>
+	<data name="D402">
+		<value>正しい数値を入力してください。</value>
+	</data>
+	<data name="D900">
+		<value>エラーが発生しました。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="D990">
+		<value>多重起動はできません。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="A101">
+		<value>します。よろしいですか？</value>
+		<comment>確認メッセージ</comment>
+	</data>
+	<data name="D410">
+		<value>対象データがありません。</value>
+	</data>
+	<data name="D403">
+		<value>正しい日付を入力してください。</value>
+	</data>
+	<data name="D404">
+		<value>正しい倉庫コードを入力してください</value>
+	</data>
+	<data name="A102">
+		<value>しました。</value>
+	</data>
+	<data name="D901">
+		<value>検索しなおしてください。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="D405">
+		<value>正しいロケーションを入力してください。</value>
+	</data>
+	<data name="D406">
+		<value>選択されていません。</value>
+	</data>
+	<data name="D902">
+		<value>在庫が存在する為削除できません。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="D904">
+		<value>取り込むデータが存在しません。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="D903">
+		<value>在庫が存在する為変更できません。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="D407">
+		<value>は0以上の値を入力してください。</value>
+	</data>
+	<data name="D408">
+		<value>は0より大きい値を入力してください。</value>
+	</data>
+	<data name="D411">
+		<value>マイナスデータが発生しました。</value>
+	</data>
+	<data name="D412">
+		<value>マイナスデータは完了できません。</value>
+	</data>
+	<data name="A005">
+		<value>棚卸中の為削除できません。</value>
+	</data>
+	<data name="A006">
+		<value>棚卸中の為変更できません。</value>
+	</data>
+	<data name="A008">
+		<value>データを登録</value>
+	</data>
+	<gamenmei gamenID="frmMENU">
+		<gamenmei>在庫管理システム　メインメニュー</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmN11">
+		<gamenmei>自動倉庫入庫設定</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmN12">
+		<gamenmei>平置き入庫設定１</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmN13">
+		<gamenmei>平置き入庫設定２</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmN14">
+		<gamenmei>平置き入庫設定３</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmN15">
+		<gamenmei>平置き入庫確定設定</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmN16">
+		<gamenmei>計画外入庫設定</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmN17">
+		<gamenmei>在庫移動設定</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmN17-1">
+		<gamenmei>在庫検索</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmN18">
+		<gamenmei>再入庫待設定</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmN19">
+		<gamenmei>パレット搬送設定</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmS21">
+		<gamenmei>計画出庫設定</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmS22">
+		<gamenmei>割込み出庫設定</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmS23">
+		<gamenmei>棚指定出庫設定</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmS24">
+		<gamenmei>緊急出庫設定</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmS25">
+		<gamenmei>コード振替設定</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmS26">
+		<gamenmei>パレット集約設定</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmS27">
+		<gamenmei>ST作業設定</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmR31">
+		<gamenmei>棚状況問合せ</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmR32">
+		<gamenmei>入庫状況問合せ</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmR33">
+		<gamenmei>出庫状況問合せ</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmR34">
+		<gamenmei>出庫作業実績</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmR35">
+		<gamenmei>棟状況問合せ</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmR36">
+		<gamenmei>設備状況問合せ</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmR37">
+		<gamenmei>設備通信ログ問合せ</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmR38">
+		<gamenmei>上位通信ログ問合せ</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmR41">
+		<gamenmei>在庫問合せ</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmR42">
+		<gamenmei>棚在庫問合せ</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmR43">
+		<gamenmei>入出庫実績問合せ</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmR44">
+		<gamenmei>棚在庫問合せ</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmM51">
+		<gamenmei>在庫修正</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmM52">
+		<gamenmei>出庫優先順メンテナンス</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmM53">
+		<gamenmei>搬送メンテナンス</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmM54">
+		<gamenmei>搬送指示クリア</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmM55">
+		<gamenmei>入庫予定数設定</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmM61">
+		<gamenmei>品番マスタメンテナンス</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmM62">
+		<gamenmei>棟マスタメンテナンス</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmM63">
+		<gamenmei>ゾーンマスタメンテナンス</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmM64">
+		<gamenmei>倉庫マスタメンテナンス</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmM65">
+		<gamenmei>棚マスタメンテナンス</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmM66">
+		<gamenmei>入庫ロケーションメンテナンス</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmM67">
+		<gamenmei>入庫先パターン設定</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmM68">
+		<gamenmei>間口設定</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmT71">
+		<gamenmei>作業開始/終了</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmT72">
+		<gamenmei>上位データ受信</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmT73">
+		<gamenmei>上位データ送信</gamenmei>
+	</gamenmei>
+	<gamenmei gamenID="frmT74">
+		<gamenmei>ホスト通信スケジュール</gamenmei>
+	</gamenmei>
+	<data name="A007">
+		<value>未入力項目があります。</value>
+	</data>
+	<data name="A009">
+		<value>データを更新</value>
+	</data>
+	<data name="A010">
+		<value>データを削除</value>
+	</data>
+	<data name="A012">
+		<value>CSVを出力</value>
+	</data>
+	<data name="A011">
+		<value>リストを出力</value>
+	</data>
+	<data name="A013">
+		<value>データが選択されていません。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="A014">
+		<value>登録するデータがありません。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="D905">
+		<value>は必須入力です。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="A103">
+		<value>メインメニューに戻ります。よろしいですか？</value>
+		<comment>確認メッセージ</comment>
+	</data>
+	<data name="A015">
+		<value>編集されたデータが存在します。</value>
+	</data>
+	<data name="D906">
+		<value>は必須選択です。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="D907">
+		<value>ロケーションが存在する為削除できません。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="D908">
+		<value>ロケーションが存在する為変更できません。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="A016">
+		<value>削除するデータがありません。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="A300">
+		<value>該当する%0はありません。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="A301">
+		<value>入力された%1は正しくありません。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="A302">
+		<value>%2は既に該当データが存在します。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="A303">
+		<value>ＤＢ更新に失敗しました。%3</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="A304">
+		<value>入力データを確認してください。%4</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="A305">
+		<value>ＤＢ読み込みに失敗しました。%5</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="A306">
+		<value>入力した%6に該当するデータがありません。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="A307">
+		<value>入力した%7は該当データがありません。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="A308">
+		<value>%8は必須項目です。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="A330">
+		<value>%Aが未入力です。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="A331">
+		<value>%Bが存在する為変更できません。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="A332">
+		<value>%Cが存在する為削除できません。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="A333">
+		<value>記号は入力できません。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="A334">
+		<value>正しい%Dを入力してください。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="A335">
+		<value>入力された%Eは既に使用されています。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="A336">
+		<value>マスタに未登録です。</value>
+		<comment>KAWAGOE追加</comment>
+	</data>
+	<data name="A337">
+		<value>パレットへ積み付けられる製品99混載を越えています。</value>
+		<comment>KAWAGOE追加</comment>
+	</data>
+	<data name="A338">
+		<value>同一%Fを二重登録することはできません。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="A339">
+		<value>検索キーが変更されています。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="A340">
+		<value>入庫先の設定が正しくありません。</value>
+		<comment>KAWAGOE追加</comment>
+	</data>
+	<data name="A341">
+		<value>%D超過しています。</value>
+		<comment>KAWAGOE追加</comment>
+	</data>
+	<data name="A309">
+		<value>表示可能な詳細データはありません。</value>
+		<comment>エラーメッセージ</comment>
+	</data>
+	<data name="A310">
+		<value>%10の入力桁数が正しくありません。</value>
+		<comment>MINESHIMA追加</comment>
+	</data>
+	<data name="A311">
+		<value>%11に失敗しました。</value>
+		<comment>MINESHIMA追加</comment>
+	</data>
+	<data name="A342">
+		<value>ファイルが開かれています。閉じて下さい。</value>
+		<comment>YAMANE追加</comment>
+	</data>
+	<data name="A343">
+		<value>%Gを出力しました。</value>
+		<comment>YAMANE追加</comment>
+	</data>
+	<data name="A344">
+		<value>入庫設定します。よろしいですか？(%H)</value>
+		<comment>KAWAGOE追加</comment>
+	</data>
+	<data name="A345">
+		<value>%Hの範囲指定が間違っています。</value>
+		<comment>YAMANE追加</comment>
+	</data>
+	<data name="A312">
+		<value>引当済データが選択されています。</value>
+		<comment>MINESHIMA追加</comment>
+	</data>
+	<data name="A313">
+		<value>データ異常が発生しました。%13</value>
+		<comment>MINSHIMA追加</comment>
+	</data>
+	<data name="A314">
+		<value>%14は使用されています。</value>
+		<comment>MINESHIMA追加</comment>
+	</data>
+	<data name="A315">
+		<value>削除に失敗しました。</value>
+		<comment>MINESHIMS追加</comment>
+	</data>
+	<data name="A316">
+		<value>%16にします。よろしいですか？</value>
+		<comment>MINESHIMA追加</comment>
+	</data>
+	<data name="D501">
+		<value>%21できません</value>
+		<comment>SHIBUYA追加</comment>
+	</data>
+	<data name="A317">
+		<value>移動先が再入庫待ちではありません。</value>
+		<comment>MINESHIMA追加</comment>
+	</data>
+	<data name="A346">
+		<value>帳簿数と実地数に差異はありません。</value>
+		<comment></comment>
+	</data>
+</root>
